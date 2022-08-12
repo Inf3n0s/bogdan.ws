@@ -1,0 +1,87 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+
+    user-select: none;
+
+    background-color: #131313;
+    font-family: 'Inconsolata', monospace;
+}
+
+/* #region Title */
+#title {
+    cursor: pointer;
+    transition: transform 0.3s linear;
+}
+
+#title:hover {
+    transform: scale(1.1) translateY(-1px);
+}
+
+#title span {
+    color: #99a8ac;
+    letter-spacing: 0.075em;
+    font-size: 2rem;
+
+    transition: color 0.3s linear;
+}
+
+#title:hover #name {
+    color: #b65bf3;
+}
+
+#title:hover #domain {
+    color: #7204bb;
+}
+
+@media (max-width: 467.98px) {
+    #title>span {
+        font-size: 7vw;
+    }
+}
+
+/* #endregion */
+
+/* #region Links */
+#links {
+    padding: 0;
+    margin-top: 2vh;
+    list-style: none;
+}
+
+#links li {
+    margin: 0 1vh;
+    display: inline;
+}
+
+#links li>a {
+    text-decoration: none;
+    margin-bottom: -1px;
+    padding-bottom: 2px;
+    color: #99a8ac;
+}
+
+#links li>a:hover {
+    animation-name: linkhover;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    animation-direction: initial;
+
+    border-bottom: 1px solid #465dd1;
+}
+
+@keyframes linkhover {
+    from {
+        border-bottom: 1px solid #465dd100;
+    }
+
+    to {
+        border-bottom: 1px solid #465dd1;
+    }
+}
+
+/* #endregion */
